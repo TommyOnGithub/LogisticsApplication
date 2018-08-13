@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<record>
+		<Name>Seattle, WA</Name>
+		<Rate>8</Rate>
+		<Neighbors>
+			<n1>Fargo, ND (1426)</n1>
+			<n2>San Francisco, CA (808)</n2>
+		</Neighbors>
+		<Items>
+			<i1>ABC123 (45)</i1>
+			<i2>JBL3100 (52)</i2>
+			<i3>PL132-C (54)</i3>
+			<i4>PU238 (60)</i4>
+		</Items>
+	</record>
+	<record>
+		<Name>San Francisco, CA</Name>
+		<Rate>12</Rate>
+		<Neighbors>
+			<n1>Seattle, WA (808)</n1>
+			<n2>Denver, CO (1249)</n2>
+			<n3>Los Angeles, CA (382)</n3>
+		</Neighbors>
+		<Items>
+			<i1>RL123A (40)</i1>
+			<i2>XLK200B (8)</i2>
+			<i3>SR71-D (81)</i3>
+			<i4>CT1928 (46)</i4>
+		</Items>
+	</record>
+	<record>
+		<Name>Los Angeles, CA</Name>
+		<Rate>10</Rate>
+		<Neighbors>
+			<n1>San Francisco, CA (382)</n1>
+			<n2>Phoenix, AZ (372)</n2>
+		</Neighbors>
+		<Items>
+			<i1>RX100-3 (57)</i1>
+			<i2>JBL3100 (60)</i2>
+			<i3>E241i (44)</i3>
+			<i4>XTP202 (32)</i4>
+		</Items>
+	</record>
+	<record>
+		<Name>Phoenix, AZ</Name>
+		<Rate>8</Rate>
+		<Neighbors>
+			<n1>Los Angeles, CA (372)</n1>
+			<n2>Santa Fe, NM (480)</n2>
+		</Neighbors>
+		<Items>
+			<i1>RX100-3 (18)</i1>
+			<i2>SR71-D (55)</i2>
+			<i3>SN-241-L (22)</i3>
+			<i4>ZTF109 (54)</i4>
+		</Items>
+	</record>
+	<record>
+		<Name>Denver, CO</Name>
+		<Rate>10</Rate>
+		<Neighbors>
+			<n1>San Francisco, CA (1249)</n1>
+			<n2>Santa Fe, NM (392)</n2>
+			<n3>Fargo, ND (889)</n3>
+			<n4>St. Louis, MO (851)</n4>
+		</Neighbors>
+		<Items>
+			<i1>ABC123 (80)</i1>
+			<i2>RL123A (110)</i2>
+			<i3>RTF110 (100)</i3>
+		</Items>
+	</record>
+	<record>
+		<Name>Santa Fe, NM</Name>
+		<Rate>8</Rate>
+		<Neighbors>
+			<n1>Phoenix, AZ (480)</n1>
+			<n2>Denver, CO (889)</n2>
+			<n3>St. Louis, MO (1032)</n3>
+			<n4>Austin, TX (688)</n4>
+		</Neighbors>
+		<Items>
+			<i1>RX100-3 (144)</i1>
+			<i2>CR2032 (280)</i2>
+		</Items>
+	</record>
+	<record>
+		<Name>Fargo</Name>
+		<Rate>8</Rate>
+		<Neighbors>
+			<n1>Seattle, WA (1426)</n1>
+			<n2>Denver, CO (889)</n2>
+			<n3>Chicago, IL (643)</n3>
+		</Neighbors>
+		<Items>
+			<i1>ABC123 (25)</i1>
+			<i2>JBL3100 (32)</i2>
+			<i3>XLK200B (82)</i3>
+		</Items>
+	</record>
+	<record>
+		<Name>Austin, TX</Name>
+		<Rate>10</Rate>
+		<Neighbors>
+			<n1>Santa Fe, NM (688)</n1>
+			<n2>St. Louis, MO (825)</n2>
+			<n3>New Orleans, LA (512)</n3>
+		</Neighbors>
+		<Items>
+			<i1>RL123A (66)</i1>
+			<i2>RX100-3 (35)</i2>
+			<i3>SN-241-L (35)</i3>
+		</Items>
+	</record>
+	<record>
+		<Name>St. Louis, MO</Name>
+		<Rate>12</Rate>
+		<Neighbors>
+			<n1>Chicago, IL (643)</n1>
+			<n2>Nashville, TN (309)</n2>
+			<n3>Austin, TX (825)</n3>
+			<n4>Santa Fe, NM (1032)</n4>
+			<n5>Denver, CO (851)</n5>
+		</Neighbors>
+		<Items>
+			<i1>ABC123 (70)</i1>
+			<i2>SR71-D (45)</i2>
+			<i3>PU238 (82)</i3>
+		</Items>
+	</record>
+	<record>
+		<Name>Chicago, IL</Name>
+		<Rate>10</Rate>
+		<Neighbors>
+			<n1>Fargo, ND (643)</n1>
+			<n2>St. Louis, MO (297)</n2>
+			<n3>New York City, NY (790)</n3>
+			<n4>Detroit, MI (282)</n4>
+		</Neighbors>
+		<Items>
+			<i1>ABC123 (60)</i1>
+			<i2>E241i (64)</i2>
+			<i3>CT1928 (20)</i3>
+			<i4>RTF110 (110)</i4>
+			<i5>XTP202 (20)</i5>
+		</Items>
+	</record>
+	<record>
+		<Name>New Orleans, LA</Name>
+		<Rate>10</Rate>
+		<Neighbors>
+			<n1>Austin, TX (512)</n1>
+			<n2>Nashville, TN (532)</n2>
+			<n3>Atlanta, GA (469)</n3>
+			<n4>Miami, FL (864)</n4>
+		</Neighbors>
+		<Items>
+			<i1>MM35P (100)</i1>
+			<i2>PU238 (49)</i2>
+			<i3>XTF109 (120)</i3>
+		</Items>
+	</record>
+	<record>
+		<Name>Nashville, TN</Name>
+		<Rate>10</Rate>
+		<Neighbors>
+			<n1>St. Louis, MO (309)</n1>
+			<n2>New Orleans, LA (532)</n2>
+			<n3>Norfolk, VA (706)</n3>
+		</Neighbors>
+		<Items>
+			<i1>RX100-3 (78)</i1>
+			<i2>XLK200B (250)</i2>
+			<i3>CR2032 (366)</i3>
+			<i4>SN-241-L (16)</i4>
+		</Items>
+	</record>
+	<record>
+		<Name>Detroit, MI</Name>
+		<Rate>10</Rate>
+		<Neighbors>
+			<n1>Chicago, IL (282)</n1>
+			<n2>New York City, NY (614)</n2>
+			<n3>Boston, MA (719)</n3>
+		</Neighbors>
+		<Items>
+			<i1>JBL3100 (117)</i1>
+			<i2>SR71-D (8)</i2>
+			<i3>CT1928 (72)</i3>
+		</Items>
+	</record>
+	<record>
+		<Name>Boston, MA</Name>
+		<Rate>10</Rate>
+		<Neighbors>
+			<n1>Detroit, MI (719)</n1>
+			<n2>New York City, NY (215)</n2>
+		</Neighbors>
+		<Items>
+			<i1>MM35P (47)</i1>
+			<i2>PL132-C (83)</i2>
+			<i3>CT1928 (65)</i3>
+		</Items>
+	</record>
+	<record>
+		<Name>New York City, NY</Name>
+		<Rate>14</Rate>
+		<Neighbors>
+			<n1>Boston, MA (215)</n1>
+			<n2>Detroit, MI (614)</n2>
+			<n3>Chicago, IL (790)</n3>
+			<n4>Norfolk, VA (363)</n4>
+		</Neighbors>
+		<Items>
+			<i1>RL123A (12)</i1>
+			<i2>CR2032 (132)</i2>
+			<i3>E241i (72)</i3>
+			<i4>ZTF109 (28)</i4>
+		</Items>
+	</record>
+	<record>
+		<Name>Norfolk, VA</Name>
+		<Rate>10</Rate>
+		<Neighbors>
+			<n1>New York City, NY (363)</n1>
+			<n2>Nashville, TN (706)</n2>
+			<n3>Atlanta, GA (566)</n3>
+		</Neighbors>
+		<Items>
+			<i1>MM35P (66)</i1>
+			<i2>RL123A (50)</i2>
+			<i3>XLK200B (14)</i3>
+		</Items>
+	</record>
+	<record>
+		<Name>Atlanta, GA</Name>
+		<Rate>Miami, FL</Rate>
+		<Neighbors>
+			<n1>Norfolk, VA (566)</n1>
+			<n2>New Orleans, LA (469)</n2>
+			<n3>Miami, FL (663)</n3>
+		</Neighbors>
+		<Items>
+			<i1>RX100-3 (90)</i1>
+			<i2>E241i (32)</i2>
+			<i3>PU238 (120)</i3>
+		</Items>
+	</record>
+	<record>
+		<Name>Miami, FL</Name>
+		<Rate>12</Rate>
+		<Neighbors>
+			<n1>Atlanta, GA (663)</n1>
+			<n2>New Orleans, LA (864)</n2>
+		</Neighbors>
+		<Items>
+			<i1>MM35P (16)</i1>
+			<i2>JBL3100 (44)</i2>
+			<i3>SR71-D (15)</i3>
+			<i4>SN-241-L (28)</i4>
+			<i5>XTP202 (88)</i5>
+		</Items>
+	</record>
+</data-set>

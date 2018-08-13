@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<record>
+		<Name>Seattle, WA</Name>
+                <Cost>300</Cost>
+		<Rate>8</Rate>
+                <Neighbor>Fargo, ND (1426)</Neighbor>
+                <Neighbor>San Francisco, CA (808)</Neighbor>
+		<Item>ABC123 (45)</Item>
+		<Item>JBL3100 (52)</Item>
+		<Item>PL132-C (54)</Item>
+                <Item>PU238 (60)</Item>
+	</record>
+	<record>
+		<Name>San Francisco, CA</Name>
+                <Cost>300</Cost>
+		<Rate>12</Rate>
+                <Neighbor>Seattle, WA (808)</Neighbor>
+		<Neighbor>Denver, CO (1249)</Neighbor>
+		<Neighbor>Los Angeles, CA (382)</Neighbor>
+		<Item>RL123A (40)</Item>
+		<Item>XLK200B (8)</Item>
+		<Item>SR71-D (81)</Item>
+                <Item>CT1928 (46)</Item>
+	</record>
+	<record>
+		<Name>Los Angeles, CA</Name>
+                <Cost>300</Cost>
+		<Rate>10</Rate>
+                <Neighbor>San Francisco, CA (382)</Neighbor>
+                <Neighbor>Phoenix, AZ (372)</Neighbor>
+		<Item>RX100-3 (57)</Item>
+		<Item>JBL3100 (60)</Item>
+		<Item>E241i (44)</Item>
+		<Item>XTP202 (32)</Item>
+	</record>
+	<record>
+		<Name>Phoenix, AZ</Name>
+                <Cost>300</Cost>
+		<Rate>8</Rate>
+                <Neighbor>Los Angeles, CA (372)</Neighbor>
+		<Neighbor>Santa Fe, NM (480)</Neighbor>
+		<Item>RX100-3 (18)</Item>
+		<Item>SR71-D (55)</Item>
+		<Item>SN-241-L (22)</Item>
+		<Item>ZTF109 (54)</Item>
+	</record>
+	<record>
+		<Name>Denver, CO</Name>
+                <Cost>300</Cost>
+		<Rate>10</Rate>
+		<Neighbor>San Francisco, CA (1249)</Neighbor>
+		<Neighbor>Santa Fe, NM (392)</Neighbor>
+                <Neighbor>Fargo, ND (889)</Neighbor>
+		<Neighbor>St. Louis, MO (851)</Neighbor>
+		<Item>ABC123 (80)</Item>
+		<Item>RL123A (110)</Item>
+		<Item>RTF110 (100)</Item>
+	</record>
+	<record>
+		<Name>Santa Fe, NM</Name>
+                <Cost>300</Cost>
+		<Rate>8</Rate>
+		<Neighbor>Phoenix, AZ (480)</Neighbor>
+		<Neighbor>Denver, CO (889)</Neighbor>
+		<Neighbor>St. Louis, MO (1032)</Neighbor>
+		<Neighbor>Austin, TX (688)</Neighbor>
+		<Item>RX100-3 (144)</Item>
+		<Item>CR2032 (280)</Item>
+	</record>
+	<record>
+		<Name>Fargo, ND</Name>
+		<Cost>300</Cost>
+                <Rate>8</Rate>
+		<Neighbor>Seattle, WA (1426)</Neighbor>
+		<Neighbor>Denver, CO (889)</Neighbor>
+		<Neighbor>Chicago, IL (643)</Neighbor>
+		<Item>ABC123 (25)</Item>
+		<Item>JBL3100 (32)</Item>
+		<Item>XLK200B (82)</Item>
+	</record>
+	<record>
+		<Name>Austin, TX</Name>
+                <Cost>300</Cost>
+		<Rate>10</Rate>
+		<Neighbor>Santa Fe, NM (688)</Neighbor>
+		<Neighbor>St. Louis, MO (825)</Neighbor>
+		<Neighbor>New Orleans, LA (512)</Neighbor>
+		<Item>RL123A (66)</Item>
+		<Item>RX100-3 (35)</Item>
+		<Item>SN-241-L (35)</Item>
+	</record>
+	<record>
+		<Name>St. Louis, MO</Name>
+                <Cost>300</Cost>
+		<Rate>12</Rate>
+		<Neighbor>Chicago, IL (643)</Neighbor>
+		<Neighbor>Nashville, TN (309)</Neighbor>
+		<Neighbor>Austin, TX (825)</Neighbor>
+		<Neighbor>Santa Fe, NM (1032)</Neighbor>
+		<Neighbor>Denver, CO (851)</Neighbor>
+		<Item>ABC123 (70)</Item>
+		<Item>SR71-D (45)</Item>
+		<Item>PU238 (82)</Item>
+	</record>
+	<record>
+		<Name>Chicago, IL</Name>
+                <Cost>300</Cost>
+		<Rate>10</Rate>
+		<Neighbor>Fargo, ND (643)</Neighbor>
+		<Neighbor>St. Louis, MO (297)</Neighbor>
+		<Neighbor>New York City, NY (790)</Neighbor>
+		<Neighbor>Detroit, MI (282)</Neighbor>
+		<Item>ABC123 (60)</Item>
+		<Item>E241i (64)</Item>
+		<Item>CT1928 (20)</Item>
+		<Item>RTF110 (110)</Item>
+		<Item>XTP202 (20)</Item>
+	</record>
+	<record>
+		<Name>New Orleans, LA</Name>
+                <Cost>300</Cost>
+		<Rate>10</Rate>
+		<Neighbor>Austin, TX (512)</Neighbor>
+		<Neighbor>Nashville, TN (532)</Neighbor>
+		<Neighbor>Atlanta, GA (469)</Neighbor>
+		<Neighbor>Miami, FL (864)</Neighbor>
+		<Item>MM35P (100)</Item>
+		<Item>PU238 (49)</Item>
+		<Item>XTF109 (120)</Item>
+	</record>
+	<record>
+		<Name>Nashville, TN</Name>
+                <Cost>300</Cost>
+		<Rate>10</Rate>
+		<Neighbor>St. Louis, MO (309)</Neighbor>
+		<Neighbor>New Orleans, LA (532)</Neighbor>
+		<Neighbor>Norfolk, VA (706)</Neighbor>
+		<Item>RX100-3 (78)</Item>
+		<Item>XLK200B (250)</Item>
+		<Item>CR2032 (366)</Item>
+		<Item>SN-241-L (16)</Item>
+	</record>
+	<record>
+		<Name>Detroit, MI</Name>
+                <Cost>300</Cost>
+		<Rate>10</Rate>
+		<Neighbor>Chicago, IL (282)</Neighbor>
+		<Neighbor>New York City, NY (614)</Neighbor>
+		<Neighbor>Boston, MA (719)</Neighbor>
+		<Item>JBL3100 (117)</Item>
+		<Item>SR71-D (8)</Item>
+		<Item>CT1928 (72)</Item>
+	</record>
+	<record>
+		<Name>Boston, MA</Name>
+                <Cost>300</Cost>
+		<Rate>10</Rate>
+		<Neighbor>Detroit, MI (719)</Neighbor>
+		<Neighbor>New York City, NY (215)</Neighbor>
+                <Item>MM35P (47)</Item>
+                <Item>PL132-C (83)</Item>
+		<Item>CT1928 (65)</Item>
+	</record>
+	<record>
+		<Name>New York City, NY</Name>
+                <Cost>300</Cost>
+		<Rate>14</Rate>
+		<Neighbor>Boston, MA (215)</Neighbor>
+		<Neighbor>Detroit, MI (614)</Neighbor>
+		<Neighbor>Chicago, IL (790)</Neighbor>
+		<Neighbor>Norfolk, VA (363)</Neighbor>
+		<Item>RL123A (12)</Item>
+		<Item>CR2032 (132)</Item>
+		<Item>E241i (72)</Item>
+		<Item>ZTF109 (28)</Item>
+	</record>
+	<record>
+		<Name>Norfolk, VA</Name>
+		<Cost>300</Cost>
+                <Rate>10</Rate>
+		<Neighbor>New York City, NY (363)</Neighbor>
+		<Neighbor>Nashville, TN (706)</Neighbor>
+		<Neighbor>Atlanta, GA (566)</Neighbor>
+		<Item>MM35P (66)</Item>
+		<Item>RL123A (50)</Item>
+		<Item>XLK200B (14)</Item>
+	</record>
+	<record>
+		<Name>Atlanta, GA</Name>
+                <Cost>300</Cost>
+		<Rate>10</Rate>
+		<Neighbor>Norfolk, VA (566)</Neighbor>
+		<Neighbor>New Orleans, LA (469)</Neighbor>
+		<Neighbor>Miami, FL (663)</Neighbor>
+		<Item>RX100-3 (90)</Item>
+		<Item>E241i (32)</Item>
+		<Item>PU238 (120)</Item>
+	</record>
+	<record>
+		<Name>Miami, FL</Name>
+                <Cost>300</Cost>
+		<Rate>12</Rate>
+		<Neighbor>Atlanta, GA (663)</Neighbor>
+		<Neighbor>New Orleans, LA (864)</Neighbor>
+		<Item>MM35P (16)</Item>
+		<Item>JBL3100 (44)</Item>
+		<Item>SR71-D (15)</Item>
+		<Item>SN-241-L (28)</Item>
+		<Item>XTP202 (88)</Item>
+	</record>
+</data-set>
