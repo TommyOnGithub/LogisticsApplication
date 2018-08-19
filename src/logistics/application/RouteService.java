@@ -25,7 +25,7 @@ public class RouteService {
     private IndexMinPQ<Double> pq;
     
     public RouteService(ShippingNetwork G, int s) throws ParserConfigurationException, ParserConfigurationException, IOException, SAXException {
-        fService = FacilityService.getInstance();
+        fService = FacilityService.getInstance("FacilityDataSet.xml");
         
         for (Edge e : G.edges()) {
             if (e.weight() < 0)
@@ -41,7 +41,7 @@ public class RouteService {
                 
         pq = new IndexMinPQ<Double>(G.V());
         pq.insert(s, distTo[s]);
-        System.out.format("Length of pq is: %d\n", pq.size());
+//        System.out.format("Length of pq is: %d\n", pq.size());
         while (!pq.isEmpty()) {
 //            System.out.format("Length of pq (inside loop) is: %d\n", pq.size());
 //            for (int i : pq)
@@ -80,12 +80,12 @@ public class RouteService {
     public Iterable<Edge> pathTo(int v) {
         if (!hasPathTo(v)) return null;
         Stack<Edge> path = new Stack<Edge>();
-        System.out.format("edgeTo[v] = %s\n", edgeTo[v]);
+//        System.out.format("edgeTo[v] = %s\n", edgeTo[v]);
         for (Edge e = edgeTo[v]; e != null;) {
-            System.out.format("edgeTo[v] = %s", edgeTo[v]);
+//            System.out.format("edgeTo[v] = %s", edgeTo[v]);
             path.push(e);
             e = edgeTo[e.other(e.either())];
-            System.out.format("Path represented as a String: %s\n", path.toString());
+//            System.out.format("Path represented as a String: %s\n", path.toString());
         }
         return path;
     }

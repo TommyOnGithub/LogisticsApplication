@@ -24,7 +24,7 @@ public class FacilityRecord {
 
     public FacilityRecord(Facility supplier, String requestor, String item, int qty) throws ParserConfigurationException, IOException, SAXException {
         
-        this.fService = FacilityService.getInstance();
+        this.fService = FacilityService.getInstance("FacilityDataSet.xml");
         this.f = f;
         this.travelDays = fService.getTravelTime(supplier.getName(), requestor);
         this.procEndDay = fService.shipDay(supplier, item, qty);

@@ -14,7 +14,9 @@ import javax.xml.parsers.ParserConfigurationException;
 
 
 /**
- *
+ * The FacilityService keeps track of Facilities in the program's network. There
+ * are also methods to query information on specific facilities.
+ * 
  * @author tbarry
  */
 public class FacilityService {
@@ -28,10 +30,10 @@ public class FacilityService {
         getFacilities(fname);
     }
     
-    public static FacilityService getInstance() throws
+    public static FacilityService getInstance(String fileName) throws
             ParserConfigurationException, IOException, SAXException {
         if (unique == null) {
-            unique = new FacilityService("FacilityDataSet1.xml");
+            unique = new FacilityService(fileName);
         }
         return unique;
     }
@@ -58,7 +60,7 @@ public class FacilityService {
         int f = fNames.indexOf(from);
         int t = fNames.indexOf(to);
         ShippingNetwork SN;
-        SN = ShippingNetwork.getInstance(fNames);
+        SN = ShippingNetwork.getInstance();
         RouteService RS = new RouteService(SN, f);
         Double travelTime = RS.distTo(t)/50/8;
         travelTime = Math.round(travelTime * 10d) / 10d;

@@ -28,39 +28,39 @@ public class PathsPrinter {
     String J;
 
     public PathsPrinter() throws ParserConfigurationException, IOException, SAXException {
-        this.FS = FacilityService.getInstance();
-        this.SN = ShippingNetwork.getInstance(FS.getFNames());
-        String bullet = Character.toString((char) 149);
-        A = "a)  Santa Fe, NM to Chicago, IL:\n"
-                + bullet + pathString("Santa Fe, NM", "Chicago, IL")+"\n"
-                + bullet + calcString("Santa Fe, NM", "Chicago, IL")+"\n";
+        this.FS = FacilityService.getInstance("FacilityDataSet.xml");
+        this.SN = ShippingNetwork.getInstance();
+        String bullet = ">";
+        A = "a)  Santa Fe, NM to Chicago, IL:\n" 
+                + bullet + pathString("Santa Fe, NM", "Chicago, IL")
+                + bullet + calcString("Santa Fe, NM", "Chicago, IL")+"\n\n";
         B = "b)  Atlanta, GA to St. Louis, MO:\n"
-                + bullet + pathString("Atlanta, GA", "St. Louis, MO")+"\n"
-                + bullet + calcString("Atlanta, GA", "St. Louis, MO")+"\n";
+                + bullet + pathString("Atlanta, GA", "St. Louis, MO")
+                + bullet + calcString("Atlanta, GA", "St. Louis, MO")+"\n\n";
         C = "c)  Seattle, WA to Nashville, TN:\n"
-                + bullet + pathString("Seattle, WA", "Nashville, TN")+"\n"
-                + bullet + calcString("Seattle, WA", "Nashville, TN")+"\n";
+                + bullet + pathString("Seattle, WA", "Nashville, TN")
+                + bullet + calcString("Seattle, WA", "Nashville, TN")+"\n\n";
         D = "d)  New York City, NY to Phoenix, AZ:\n"
-                + bullet + pathString("New York City, NY", "Phoenix, AZ")+"\n"
-                + bullet + calcString("New York City, NY", "Phoenix, AZ")+"\n";
+                + bullet + pathString("New York City, NY", "Phoenix, AZ")
+                + bullet + calcString("New York City, NY", "Phoenix, AZ")+"\n\n";
         E = "e)  Fargo, ND to Austin TX:\n"
-                + bullet + pathString("Fargo, ND", "Austin, TX")+"\n"
-                + bullet + calcString("Fargo, ND", "Austin, TX")+"\n";
+                + bullet + pathString("Fargo, ND", "Austin, TX")
+                + bullet + calcString("Fargo, ND", "Austin, TX")+"\n\n";
         F = "f)  Denver, CO to Miami, FL:\n"
-                + bullet + pathString("Denver, CO", "Miami, FL")+"\n"
-                + bullet + calcString("Denver, CO", "Miami, FL")+"\n";
+                + bullet + pathString("Denver, CO", "Miami, FL")
+                + bullet + calcString("Denver, CO", "Miami, FL")+"\n\n";
         G = "g)  Austin, TX to Norfolk, VA:\n"
-                + bullet + pathString("Austin, TX", "Norfolk, VA")+"\n"
-                + bullet + calcString("Austin, TX", "Norfolk, VA")+"\n";
+                + bullet + pathString("Austin, TX", "Norfolk, VA")
+                + bullet + calcString("Austin, TX", "Norfolk, VA")+"\n\n";
         H = "h)  Miami, FL to Seattle, WA:\n"
-                + bullet + pathString("Miami, FL", "Seattle, WA")+"\n"
-                + bullet + calcString("Miami, FL", "Seattle, WA")+"\n";
+                + bullet + pathString("Miami, FL", "Seattle, WA")
+                + bullet + calcString("Miami, FL", "Seattle, WA")+"\n\n";
         I = "i)  Los Angeles, CA to Chicago, IL:\n"
-                + bullet + pathString("Los Angeles, CA", "Chicago, IL")+"\n"
-                + bullet + calcString("Los Angeles, CA", "Chicago, IL")+"\n";
+                + bullet + pathString("Los Angeles, CA", "Chicago, IL")
+                + bullet + calcString("Los Angeles, CA", "Chicago, IL")+"\n\n";
         J = "j)  Detroit, MI to Nashville, TN:\n"
-                + bullet + pathString("Detroit, MI", "Nashville, TN")+"\n"
-                + bullet + calcString("Detroit, MI", "Nashville, TN")+"\n";
+                + bullet + pathString("Detroit, MI", "Nashville, TN")
+                + bullet + calcString("Detroit, MI", "Nashville, TN")+"\n\n";
     }
     
     public void getShortestPathTests() {

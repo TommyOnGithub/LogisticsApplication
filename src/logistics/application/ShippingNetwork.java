@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ArrayList;
+import java.util.Set;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
@@ -19,39 +20,39 @@ import org.xml.sax.SAXException;
  */
 public class ShippingNetwork {
     
-    private final int V;
-    private int E;
-    private FacilityService fService; 
-    private HashSet<Edge>[] adj;
-    private ArrayList<String> names;
-    private static ShippingNetwork unique;
+    private final int               V;
+    private int                     E;
+    private FacilityService         fService; 
+    private HashSet<Edge>[]         adj;
+    private ArrayList<String>       names;
+    private static ShippingNetwork  unique;
    
-    private ShippingNetwork(ArrayList<String> facilities) throws ParserConfigurationException, IOException, SAXException {
-        this.V = facilities.size();
-        if (V < 0) throw new IllegalArgumentException("Number of verticies must be nonnegative");
+    private ShippingNetwork() throws ParserConfigurationException, IOException, SAXException {
+        this.fService = FacilityService.getInstance("FacilityDataSet.xml");
+        this.names = fService.getFNames();
+//        System.out.println(this.names);
+        this.V = this.names.size();
         this.E = 0;
-        this.fService = FacilityService.getInstance();
-        adj = (HashSet<Edge>[]) new HashSet[V];
-        names = new ArrayList(V);
+        this.adj = (HashSet<Edge>[]) new HashSet[V];
         for (int v = 0; v < V; v++) {
-            adj[v] = new HashSet<Edge>();
-            names.add(v, facilities.get(v));
+            this.adj[v] = new HashSet<Edge>();
         }
-        HashMap<String, Integer> neighbors = new HashMap<>();
-        for (int i = 0; i < facilities.size(); i++) {
-            neighbors = fService.getNeighbors(facilities.get(i));
-            for (Map.Entry<String, Integer> entry : neighbors.entrySet()) {
-                Edge e = new Edge(i, names.indexOf(entry.getKey()), entry.getValue());
-                System.out.format("Edge as String: %s\n", e.toString());
+        Set<Map.Entry<String, Integer>> neighbors;
+        for (String name : this.names) {
+            neighbors = this.fService.getNeighbors(name).entrySet();
+//            System.out.print(neighbors + "\n");
+            for (Map.Entry<String, Integer> entry : neighbors) {
+                Edge e = new Edge(this.names.indexOf(name), this.names.indexOf(entry.getKey()), entry.getValue());
+//                System.out.format("Edge as String: %s\n", e.toString());
                 addEdge(e);
             }
         }
         
     }
     
-    public static ShippingNetwork getInstance(ArrayList<String> facilities) throws ParserConfigurationException, IOException, SAXException {
+    public static ShippingNetwork getInstance() throws ParserConfigurationException, IOException, SAXException {
         if (unique == null) {
-            return new ShippingNetwork(facilities);
+            return new ShippingNetwork();
         }
         return unique;
     }

@@ -19,11 +19,24 @@ import org.xml.sax.SAXParseException;
 
 
 /**
- *
+ * This class has one method, load, which parses Item data from a given XML
+ * document into an ArrayList of Item objects.
+ * 
  * @author tbarry
  */
 public class ItemLoader {
     
+    /**
+     * This method parses the given XML document for Item data and returns
+     * that data in the form of an ArrayList<Item>. It takes one String
+     * argument, the file name, and parses the document, which should be saved
+     * in the same directory. The return value is an ArrayList of Item
+     * objects.
+     * 
+     * @param fname
+     * @return ArrayList<Item>
+     * @throws IOException 
+     */
     public ArrayList load (String fname) throws IOException {
         ArrayList<Item> itemList = new ArrayList<>();
         ItemFactory itemFactory = new ItemFactory();

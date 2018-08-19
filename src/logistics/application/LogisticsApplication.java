@@ -6,6 +6,7 @@
 package logistics.application;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
@@ -17,16 +18,18 @@ import org.xml.sax.SAXException;
 public class LogisticsApplication {
 
     /**
+     * Main method of the application.
+     * 
      * @param args the command line arguments
      */
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
-        FacilityService fService = FacilityService.getInstance();
+        FacilityService fService = FacilityService.getInstance("FacilityDataSet1.xml");
         fStatusHelper fStatus = new fStatusHelper();
         ItemCatalogPrinter iPrinter = new ItemCatalogPrinter();
-        ItemService iService = ItemService.getInstance();
-        iService.getItems("ItemsData.xml");
-        ShippingNetwork network = ShippingNetwork.getInstance(fService.getFNames());
-        for (String name : fService.getFNames()) {
+        ItemService iService = ItemService.getInstance("ItemsData.xml");
+        ShippingNetwork network = ShippingNetwork.getInstance();
+        ArrayList<String> names = fService.getFNames();
+        for (String name : names) {
             fStatus.getStatus(name);
         }
         iPrinter.getCatalog();

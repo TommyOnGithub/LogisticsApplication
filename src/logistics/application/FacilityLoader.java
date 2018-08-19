@@ -6,7 +6,6 @@
 package logistics.application;
 
 import java.util.ArrayList;
-import java.io.File;
 import java.io.IOException;
 import org.w3c.dom.Document;
 import org.w3c.dom.*;
@@ -18,11 +17,26 @@ import org.xml.sax.SAXException;
 
 
 /**
- *
+ * This class has one method, load, which parses Facility data from a given XML
+ * document into an ArrayList of Facility objects.
+ * 
  * @author tbarry
  */
 public class FacilityLoader {
     
+    /**
+     * This method parses the given XML document for Facility data and returns
+     * that data in the form of an ArrayList<Facility>. It takes one String
+     * argument, the file name, and parses the document, which should be saved
+     * in the same directory. The return value is an ArrayList of Facility
+     * objects.
+     * 
+     * @param fname
+     * @return ArrayList<Facility>
+     * @throws SAXException
+     * @throws IOException
+     * @throws ParserConfigurationException 
+     */
     public ArrayList load(String fname) throws SAXException, IOException, ParserConfigurationException {
         ArrayList<Facility> facilityList = new ArrayList<>();
         FacilityFactory facilityFactory = new FacilityFactory();

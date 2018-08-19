@@ -19,7 +19,7 @@ import org.xml.sax.SAXException;
  */
 public class FacilityFactory {
     
-    ItemService iService = ItemService.getInstance();
+    ItemService iService = ItemService.getInstance("ItemsData.xml");
 
     public FacilityFactory() throws ParserConfigurationException,
             IOException, SAXException {

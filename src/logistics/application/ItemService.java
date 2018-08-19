@@ -13,25 +13,45 @@ import org.xml.sax.SAXException;
 
 
 /**
- *
+ * The ItemService keeps track of Items in the program's catalog. It also
+ * contains methods to query data on items in the catalog.
+ * 
  * @author tbarry
  */
 public class ItemService {
     
     private static ItemService unique;
-    private ItemService() {}
     private final HashMap<String,Item> hm = new HashMap<>();
     private ArrayList<String> itemIDs;
     
+    private ItemService(String fileName) throws
+            ParserConfigurationException, IOException, SAXException {
+        getItems(fileName);
+    }
     
-    public static ItemService getInstance() {
+    /**
+     * Returns a pointer to the singleton ItemService to the caller.
+     * 
+     * @return 
+     */
+    public static ItemService getInstance(String fileName) throws
+            ParserConfigurationException, IOException, SAXException {
         if (unique == null) {
-            unique = new ItemService();
+            unique = new ItemService(fileName);
         }
         return unique;
     }
     
-    public void getItems(String fname) throws
+    /**
+     * This method retrieves a list of Items on startup to initialize the
+     * program's ItemService.
+     * 
+     * @param fname
+     * @throws ParserConfigurationException
+     * @throws IOException
+     * @throws SAXException 
+     */
+    private void getItems(String fname) throws
             ParserConfigurationException, IOException, SAXException {
         ItemLoader iLoader = new ItemLoader();
         ArrayList itemsList = iLoader.load(fname);

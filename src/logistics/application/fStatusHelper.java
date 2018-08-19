@@ -10,7 +10,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
 /**
- *
+ * This class formats Facility object information in a user-friendly way to be
+ * displayed on a command line.
+ * 
  * @author Tommy
  */
 public class fStatusHelper {
@@ -19,8 +21,8 @@ public class fStatusHelper {
     ShippingNetwork Network;
     
     public fStatusHelper() throws ParserConfigurationException, IOException, SAXException {
-        this.fService = FacilityService.getInstance();
-        this.Network = ShippingNetwork.getInstance(fService.getFNames());
+        this.fService = FacilityService.getInstance("FacilityDataSet.xml");
+        this.Network = ShippingNetwork.getInstance();
     }
     
     public void getStatus(String fname) throws SAXException, ParserConfigurationException, IOException {
